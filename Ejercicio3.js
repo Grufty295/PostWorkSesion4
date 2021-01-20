@@ -1,9 +1,19 @@
 //frequency
 function frequency(string) {
- for(var i = 0; i < string.length; i++){
-   console.log(string.charAt(i));
- }
-}
+  let charactersArray = string.split("").sort(),
+  charArrLength = charactersArray.length;
+  let result = { };
+
+  for (let i = 0; i < charArrLength; i++) {
+    let temporary = charactersArray[i];
+    if (result[temporary]) {
+      result[temporary]++;
+    } else {
+      result[temporary] = 1;
+    }
+  }
+  return result;
+};
 
 console.log("------------------Ejercicio 3------------------------");
 console.log('Test 1:', frequency('cccbbbaaa'))
