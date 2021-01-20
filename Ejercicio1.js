@@ -3,8 +3,7 @@ function deepEqual(a, b) {
   if (a === b) {
     return true;
   } else if (typeof a === "object" && typeof b === "object") {
-    let aKeys = Object.keys(a),
-      bKeys = Object.keys(b);
+    let aKeys = Object.keys(a),bKeys = Object.keys(b);
     if (aKeys.length !== bKeys.length) {
       return false;
     } else {
@@ -40,6 +39,7 @@ var john = {
   lastName: 'Doe'
 }
 
+console.log("------------------Ejercicio 1------------------------");
 console.log('Test 1:', deepEqual(1, 1)) // true
 console.log('Test 2:', deepEqual(1, '1')) // false
 console.log('Test 3:', deepEqual(john, john)) // true
